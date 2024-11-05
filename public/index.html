@@ -1,0 +1,84 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Prices</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-black space-y-[4rem]  text-white">
+  <nav class="flex text-white justify-center  items-center   md:h-[4rem]">
+    <div class="flex  gap-[7rem] w-[97%] bg-black ">
+      <div class=" flex items-center mt-3  w-[33%]"> <img class="min-w-[200px]" src="pic.png" alt="image" /> </div>
+      <div class="flex gap-[1rem] w-[33%] justify-center items-center">
+        <div><button class="bg-slate-700 rounded-xl px-5 py-1">INR <span></span> </button></div>
+        <div> <button class="bg-slate-700 rounded-xl px-5 py-1">BTC <span></span></button> </div>
+        <div><button class="bg-slate-700 rounded-xl px-4 w-[7rem] text-center flex md:px-5 py-1 mr-1">BUY BTC</button></div>
+      </div>
+      <div class="flex items-center gap-[2rem] justify-end invisible md:visible   w-[33%]">
+        <div class="rounded-full px-3 py-2 font-italic  text-teal-500 border-2 border-teal-500"> 56 </div>
+        <div> <button class="md:px-5 md:py-2 bg-teal-500  rounded-xl"> <span></span> Connect Telegram</button> </div>
+        <div class="flex items-center cursor-pointer">
+          <div 
+            id="toggle-switch"
+            class="relative w-[3.5rem] h-9 bg-gray-200 rounded-full peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:bg-gray-700 after:content-[''] after:absolute after:top-[5px] after:start-[10px] after:bg-teal-500 after:rounded-full after:h-[1.5rem] after:w-[1.5rem] after:transition-all">
+          </div>
+          <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300"></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div class="w-screen bg-black text-white px-2 h-full">
+   
+    <div class="flex flex-col md:flex-row gap-5 lg:justify-around text-center items-center pb-4">
+      <div class="w-[15%] flex flex-col items-center  ">
+        <div class=" text-teal-500 text-[3rem] leading-none">0.1%</div>
+        <div class=" text-[1.3rem] text-slate-400">5 Mins</div>
+      </div>
+      <div class="w-[15%] flex flex-col items-center">
+        <div class=" text-teal-500 text-[3rem] leading-none">0.96%</div>
+        <div class=" text-[1.3rem] text-slate-400">1 Hour</div>
+      </div>
+      <div class="w-[30%] flex flex-col items-center ">
+        <div class="w-screen flex  justify-center  text-[1.8rem] text-wrap  text-slate-400 ">Best Price to Trade</div>
+        <div class=" text-[3rem] md:text-[4rem] lg:text-[5.9rem]"> &#8377;26,5,110 </div>
+        <div class=" text-[1rem] text-wrap text-slate-400">Average BTC/INR net price including Commision</div>
+      </div>
+      <div class="w-[15%] flex flex-col items-center">
+        <div class=" text-teal-500 text-[3rem] leading-none">2.73%</div>
+        <div class=" text-[1.3rem] text-slate-400">1 Day</div>
+      </div>
+      <div class="w-[15%] flex flex-col items-center">
+        <div class=" text-teal-500 text-[3rem] leading-none">7.51%</div>
+        <div class=" text-[1.3rem] text-slate-400">7 Days</div>
+      </div>
+    </div>
+  </div>
+  <main class="flex w-full">
+    <table class="flex flex-col text-end w-full items-center  justify-center">
+      <thead class="w-full">
+        <tr class="flex w-screen  justify-evenly text-center  text-slate-500 text-[1.3rem] md:text-[1.6rem] ">
+          <th class="  w-full ">#</th>
+          <th class="  w-full ">Name</th>
+          <th class="  w-full ">Last</th>
+          <th class="  w-full ">Buy</th>
+          <th class="  w-full ">Sell</th>
+          <th class="  w-full ">Volume</th>
+          <th class="  w-full ">Base Unit</th>
+        </tr>
+      </thead>
+      <tbody class="flex flex-col gap-3  w-full bg-black " id="crypto-table-body"></tbody>
+    </table>
+  </main>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
